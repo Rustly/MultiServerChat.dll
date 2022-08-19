@@ -23,9 +23,9 @@ namespace MultiServerChat
             if (!File.Exists(path))
             {
                 ConfigFile config = new ConfigFile();
-                config.RestURLs.Add("http://server1.com:7878/");
-                config.RestURLs.Add("http://server1.com:8205/");
-                config.RestURLs.Add("http://server2.com:7878/");
+                config.RestURLs.Add("http://server1.com:7878");
+                config.RestURLs.Add("http://server1.com:8205");
+                config.RestURLs.Add("http://server2.com:7878");
 
                 File.WriteAllText(path, JsonConvert.SerializeObject(config, Formatting.Indented));
                 return config;
